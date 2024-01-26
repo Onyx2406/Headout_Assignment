@@ -50,6 +50,37 @@ Run `generateData.js` to generate 100MB sample data files containing multiple li
 - **Exposed Port**: 8080.
 - **Resource Limits**: 1500 MB RAM and 2 CPU cores.
 
+## Optimizations
+
+### Asynchronous File Handling
+
+- **Description**: Utilizing Node.js's non-blocking I/O model.
+- **Benefit**: Ensures high throughput and efficient handling of file operations, especially under heavy load.
+
+### Stream-Based File Reading
+
+- **Description**: Implementing stream-based reading for large files.
+- **Benefit**: Minimizes memory usage and improves response times, crucial for large file handling.
+
+### Docker Containerization
+
+- **Multi-Architecture Support**:
+  - **Description**: Building the Docker image to support both ARM and x86 architectures.
+  - **Benefit**: Ensures wide compatibility across different platforms and hardware.
+- **Resource Limits**:
+  - **Description**: Configuring the Docker container with specific resource limits (1500 MB RAM and 2 CPU cores).
+  - **Benefit**: Optimizes resource usage and prevents over-allocation in shared environments.
+
+### Error Handling
+
+- **Description**: Implementing comprehensive error handling.
+- **Benefit**: Gracefully manages file not found errors, out-of-range line requests, and invalid input scenarios, enhancing the server's reliability.
+
+### Endpoint Optimization
+
+- **Description**: Optimizing the `/data` endpoint for query parameter handling.
+- **Benefit**: Ensures quick parsing and efficient retrieval of file content, improving overall endpoint performance.
+
 ## Contact
 - Yash Sancheti
 - [yashsancheti24@gmail.com](mailto:yashsancheti24@gmail.com)
