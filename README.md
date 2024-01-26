@@ -1,4 +1,3 @@
-# Headout_Assignment
 
 # Simple HTTP Server with Docker
 
